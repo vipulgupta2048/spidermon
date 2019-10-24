@@ -233,11 +233,13 @@ A `list` containing the local path of the item schema.
 .. code-block:: python
 
     # settings.py
+    from schemas import MY_SCHEMAS
 
     SPIDERMON_VALIDATION_CERBERUS = [
         '/path/to/schema.json',
         'http://example.com/mycerberusschema',
-        {"Field": {"type": "number", "required":True}}
+        {"Field": {"type": "number", "required":True}},
+        MY_SCHEMAS
     ]
 
 If you are working on a spider that produces multiple items types, you can define paths to schema for each item as `dict` as shown below:
